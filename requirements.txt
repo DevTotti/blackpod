@@ -1,0 +1,8 @@
+Flask==1.1.1
+gunicorn==20.0.4
+pandas==1.0.1
+sklearn==0.0
+scikit-learn==0.22.1
+scipy==1.4.1
+pmdarima==1.5.3
+Flask-PyMongo==2.3.0

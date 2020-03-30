@@ -1,0 +1,23 @@
+[
+{
+	"month":"April",
+	"temp_hi":31,
+	"temp_lo":21,
+	"rainfall":2.1,
+	"year": 2020
+},
+{
+	"month":"May",
+	"temp_hi":31,
+	"temp_lo":20,
+	"rainfall": 1.67,
+	"year": 2020
+},
+{
+	"month":"June",
+	"temp_hi":30.7,
+	"temp_lo":20.6,
+	"rainfall": 5.3,
+	"year": 2020
+}
+]
