@@ -26,4 +26,28 @@ def toCloud():
 
 
 
-toCloud()
+def saveInfo(name, age, state, phone, add, farm):
+	db = mongo.db.users
+
+	data = {"name":name, "age": age, "state of residence":state, "phone number":phone, "address": add, "farm location": farm}
+
+	try:
+		save = db.insert_one(data)
+
+
+		print("Data saved successfully")
+
+		response = "Success! "
+
+
+	except Exception as error:
+		
+		print("Error saving data into database")
+
+		response = "Failed!"
+
+
+	return response
+
+
+

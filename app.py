@@ -8,6 +8,7 @@ Created on Sat Mar 21 07:01:47 2020
 
 from flask import Flask, jsonify, request
 from fetch_data_from_cloud import *
+from saveTocloud import *
 
 
 
@@ -26,6 +27,26 @@ from pmdarima.arima import auto_arima
 import pandas as pd
 from sklearn.metrics import confusion_matrix
 import pickle
+
+
+
+@app.route('/register', methods = ['POST'])
+def register():
+	if request.method == 'POST':
+		name = request.get_json()['name']
+		age = request.get_json()['age']
+		state = request.get_json()['state']
+		phone = request.get_json()['phone']
+		add = request.get_json()['address']
+		farm = request.get_json()['farm']
+
+		response = saveInfo(name, age, state, phone, add, farm)
+
+
+		response = {"response": response}
+
+		return jsonify(response)
+
 
 
 
