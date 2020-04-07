@@ -37,9 +37,9 @@ def register():
 		age = request.get_json()['age']
 		residence = request.get_json()['residence']
 		phoneNumber = request.get_json()['phoneNumber']
-		farmLocation = request.get_json()['farmLocation']
+		farmingLocation = request.get_json()['farmingLocation']
 
-		response = saveInfo(name, age, residence, phoneNumber, farmLocation)
+		response = saveInfo(name, age, residence, phoneNumber, farmingLocation)
 
 
 		response = {"response": response}
