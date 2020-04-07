@@ -35,12 +35,11 @@ def register():
 	if request.method == 'POST':
 		name = request.get_json()['name']
 		age = request.get_json()['age']
-		state = request.get_json()['state']
-		phone = request.get_json()['phone']
-		add = request.get_json()['address']
-		farm = request.get_json()['farm']
+		residence = request.get_json()['residence']
+		phoneNumber = request.get_json()['phoneNumber']
+		farmLocation = request.get_json()['farmLocation']
 
-		response = saveInfo(name, age, state, phone, add, farm)
+		response = saveInfo(name, age, residence, phoneNumber, farmLocation)
 
 
 		response = {"response": response}
